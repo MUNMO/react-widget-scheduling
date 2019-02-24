@@ -68,5 +68,6 @@ module.exports = {
       ],
     devServer: {
       contentBase: './app'
-    }
+    },
+    performance: { hints: false }
   };

@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import {Button} from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal'
-import Schedular from './Schedular'
 import {Link} from 'react-router-dom'
 import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 import styles from '../css/map.scss'

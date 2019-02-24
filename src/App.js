@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Home  from '../app/components/Home';
-import Schedular from '../app/components/Schedular'
 import { Router, Route, Switch,browserHistory} from "react-router";
 import { BrowserRouter}from 'react-router-dom'
 
