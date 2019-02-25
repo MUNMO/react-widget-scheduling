@@ -8,6 +8,10 @@
     "dev": "webpack --mode development --module-bind js=babel-loader",
     "build": "webpack --mode production --module-bind js=babel-loader"
   },
+  "engines": {
+    "npm": "5.6.0",
+    "node": "10.1.0"
+  },
   "author": "Muneeb",
   "license": "ISC",
   "dependencies": {
