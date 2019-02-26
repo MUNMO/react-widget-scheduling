@@ -25,6 +25,6 @@ app.use(webpackDevMiddleware(compiler,{
 
 // app.listen(port, () => console.log("Listening on Port", port)) 
 app.listen(port, function () {
-  console.log(`Online-Scheduling app!`);
+  console.log(`Online-Scheduling app Listening on port 3000!`);
  });
  
