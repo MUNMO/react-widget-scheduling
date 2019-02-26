@@ -42,7 +42,7 @@ class Home extends React.Component{
     const share_id = this.props.shareid
     console.log(share_id)
 
-    fetch(`https://online-scheduling-staging.herokuapp.com/api/v1/schedule_online?share_id=${share_id}`,{ mode: 'no-cors'})
+    fetch(`https://online-scheduling-staging.herokuapp.com/api/v1/schedule_online?share_id=${share_id}`)
     .then(response => response.json())
     .then(data =>
      this.setState({users:data.html},()=>console.log(this.state.users +"data type" +typeof this.state.users))
