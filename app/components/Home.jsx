@@ -4,7 +4,7 @@ import {Button} from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal'
 import {Link} from 'react-router-dom'
 import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
-import styles from '../css/map.scss'
+// import styles from '../css/map.scss'
 
 
 class Home extends React.Component{
