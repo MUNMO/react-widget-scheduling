@@ -10,7 +10,8 @@ module.exports = {
     entry: "./src/index.js",
     output: {
         path: path.resolve('dist'),
-        filename: 'widget.js'
+        filename: 'widget.js',
+        publicPath: '/'
     },
     module: {
         rules: [
