@@ -8,7 +8,7 @@
  const webpackDevMiddleware = require('webpack-dev-middleware');
 
 
-app.use(express.static(__dirname + '/app')); 
+app.use(express.static(__dirname + '/dist')); 
 
 app.use(webpackDevMiddleware(compiler,{
   hot: true,
