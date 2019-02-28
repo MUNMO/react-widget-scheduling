@@ -1,30 +1,11 @@
- const express = require('express')
- const app = express()
- const path = require('path')
- const webpack = require('webpack');
- const webpackConfig = require('./webpack.config.js');
- const port = process.env.PORT || 3000
- const compiler = webpack(webpackConfig);
- const webpackDevMiddleware = require('webpack-dev-middleware');
+var path = require('path');
+var express = require('express');
 
+var app = express();
 
-app.use(express.static(__dirname + '/dist')); 
+app.use(express.static(path.join(__dirname, 'dist')));
+app.set('port', process.env.PORT || 3000);
 
-app.use(webpackDevMiddleware(compiler,{
-  hot: true,
-  filename: 'widget.js',
-  publicPath: '/',
-  stats: {
-    colors: true,
-  },
-
-  historyApiFallback: true,
- 
-}));
-
-
-// app.listen(port, () => console.log("Listening on Port", port)) 
-app.listen(port, function () {
-  console.log(`Online-Scheduling app Listening on port 3000!`);
- });
- 
+var server = app.listen(app.get('port'), function() {
+  console.log('listening on port ', server.address().port);
+});
