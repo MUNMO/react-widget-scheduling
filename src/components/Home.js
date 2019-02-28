@@ -38,8 +38,8 @@ class Home extends React.Component{
     script.src ="https://www.localmed.com/assets/web/js/widget.js"
     document.getElementsByTagName('head')[0].appendChild(script);
     
-    // storing prop in variable
-    const share_id = this.props.shareid
+    // storing prop in variable with parameter
+    const share_id = this.props.match.params.id
     console.log(share_id)
 
     fetch(`https://online-scheduling-staging.herokuapp.com/api/v1/schedule_online?share_id=${share_id}`)

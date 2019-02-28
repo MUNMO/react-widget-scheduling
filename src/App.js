@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Home  from './components/Home';
-import { Router, Route, Switch,browserHistory} from "react-router";
-import { BrowserRouter}from 'react-router-dom'
-
+import { BrowserRouter} from 'react-router-dom'
+import Route from 'react-router-dom/Route'
 
 
 
@@ -16,16 +15,18 @@ class App extends React.Component{
 
     render(){
         return(
-        
-            <div>
-               <Home shareid={this.props.share_id} />
-                
-            </div>
-
-            
            
-        )
+            <BrowserRouter>
+             <div>
+             <Route path="/widget/:id" component={Home} />
+             </div>
+             
+            </BrowserRouter> 
+            )
+            }
+           
+        
     }
-} 
+
 
 export default App;

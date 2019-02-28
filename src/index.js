@@ -6,9 +6,9 @@ import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
 
 
 // Getting attribute of element and passing to APP component as Prop
-var el = document.getElementById("containerssss")
-var el_attr = el.getAttribute("data-id");
+// var el = document.getElementById("container")
+// var el_attr = el.getAttribute("data-id");
+// share_id={el_attr}
 
 
-ReactDOM.render(<App share_id={el_attr} />,document.getElementById('containerssss'));
-
+ReactDOM.render(<App/>,document.getElementById('container'));
