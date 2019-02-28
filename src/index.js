@@ -10,5 +10,5 @@ var el = document.getElementById("container")
 var el_attr = el.getAttribute("data-id");
 
 
-ReactDOM.render(<App share_id={el_attr} />,document.getElementById('container'));
+ReactDOM.render(<App share_id={el_attr} />,document.getElementById('containerssss'));
 
