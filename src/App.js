@@ -15,6 +15,7 @@ class App extends React.Component{
 
     render(){
         document.body.style.backgroundColor = "#324851";
+        document.body.style.overflow ="scroll"
         return(
            
             <BrowserRouter>
