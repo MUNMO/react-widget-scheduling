@@ -14,6 +14,7 @@ class App extends React.Component{
     }
 
     render(){
+        document.body.style.backgroundColor = "#324851";
         return(
            
             <BrowserRouter>
