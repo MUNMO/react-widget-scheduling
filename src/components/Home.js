@@ -59,33 +59,9 @@ class Home extends React.Component{
         const data_received = this.state.users
         return(
         <div>
-           <Button variant="primary" className="custom-btn" onClick={this.handleShow}>
-            Schedule  Online
-           </Button>
-        
-          <Modal show={this.state.show} onHide={this.handleClose}>
-            <Modal.Header closeButton>
-            <Modal.Title>Book Appointment Online </Modal.Title>
-            </Modal.Header>
-          <Modal.Body>
-           
-           {/* Display Local med link with ID  */}
-            
-          { ReactHtmlParser(data_received)}
-           
-           {/* <Link to={`/schedular/2`}>Roostergrin</Link> */}
-             
-            
-          </Modal.Body>
-          
-          <Modal.Footer>
-            <Button variant="secondary" onClick={this.handleClose}>
-              Close
-            </Button>
-            
-          </Modal.Footer>
-        </Modal>
 
+          { ReactHtmlParser(data_received)}
+          
       </div>
       )
     }
