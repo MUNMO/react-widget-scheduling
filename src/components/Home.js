@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import {Button} from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal'
 import {Link} from 'react-router-dom'
-import Widget  from './Widget';
+// import Widget  from './Widget';
 import Iframe from 'react-iframe';
 import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 
