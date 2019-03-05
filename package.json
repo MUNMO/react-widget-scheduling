@@ -4,6 +4,7 @@
   "description": "Clone the repo and Embed the widget with Simple process ## Available Scripts",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack-dev-server --mode production --open",
     "start": "./node_modules/webpack/bin/webpack.js -p --progress && node server.js",
     "build": "webpack --mode production"
   },

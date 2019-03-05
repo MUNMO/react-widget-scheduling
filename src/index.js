@@ -1,14 +1,47 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 // import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
-import style  from '../style.css'
+import Home  from './components/Home';
+// import 'bootstrap';
+// import 'bootstrap/js/dist/util';
+// import 'bootstrap/js/dist/dropdown';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-// Getting attribute of element and passing to APP component as Prop
-// var el = document.getElementById("container")
-// var el_attr = el.getAttribute("data-id");
-// share_id={el_attr}
+const renderWidget = event => {
+	event.preventDefault();
+	event.stopPropagation();
+
+	let options = {
+			href: event.target.getAttribute('href'),
+			showModal: true
+        },
+        //??
+		widgetId = event.target.getAttribute('data-widget-rootid') || 'reactWidget';
+    //??
+	let rootWidgetDiv = document.querySelector(`#${widgetId}`);
+
+	if (!rootWidgetDiv) {
+		rootWidgetDiv = document.createElement('div');
+		rootWidgetDiv.id = widgetId;
+
+		document.body.appendChild(rootWidgetDiv);
+	}
 
 
-ReactDOM.render(<App/>,document.getElementById('containersss'));
+	ReactDOM.render(<Home { ...options } />, rootWidgetDiv)
+};
+
+((fn) => {
+	if (document.attachEvent ? document.readyState === 'complete' : document.readyState !== 'loading') {
+		fn();
+	}
+	else {
+		document.addEventListener('DOMContentLoaded', fn);
+	}
+})(() => {
+	document.querySelectorAll('[data-iframe-react-toggle="modal"]').forEach(node => {
+		node.addEventListener('click', renderWidget);
+	});
+})
