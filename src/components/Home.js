@@ -37,9 +37,8 @@ class Home extends React.Component{
     script.src ="https://www.localmed.com/assets/web/js/widget.js"
     document.getElementsByTagName('head')[0].appendChild(script);
 
-
+    // Getting last segement of URL 
     const share_id = this.props.href
-    console.log(share_id)
     const slice_url = share_id.substring(share_id.lastIndexOf('/') + 1)
     console.log(slice_url)
 
@@ -64,9 +63,6 @@ class Home extends React.Component{
           
         <div>
            {/* { ReactHtmlParser(data_received)} */}
-   
-         
-         {/* Getting the ID through the URL into Iframe  */}
        
 				{
 					showModal ? <Modal close={this.handleClose} lists={users} /> : ''
