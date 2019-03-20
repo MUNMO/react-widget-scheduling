@@ -1,3 +1,6 @@
+// This Component renders when you want see data on modal 
+
+
 import React, { Component } from 'react';
 import ReactHtmlParser from 'react-html-parser';
 import '../../style.css';
@@ -17,15 +20,9 @@ class Modal extends Component {
                         </button>
                     </div>
                     <div className="popup-body">
-                        
-                            
-                            {/* {
-                                lists.map((list,i) => {
-                                    return ReactHtmlParser(list)
-                                })
-                            } */}
+                    
 
-                            {ReactHtmlParser(lists)}
+                           {ReactHtmlParser(lists)}
                         
                     </div>
                     <div className="popup-footer">

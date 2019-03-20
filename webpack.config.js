@@ -7,7 +7,7 @@ const HTMLPlugin = new HTMLWebpackPlugin({
 });
 
 module.exports = {
-    entry: "./src/index.js",
+    entry: ['babel-polyfill', "./src/index.js"],
     output: {
         path: path.resolve('dist'),
         filename: 'widget.js',
