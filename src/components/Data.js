@@ -7,13 +7,15 @@ class Data extends Component {
     }
     render() {
         console.log(this.props);
-        let html_data = this.props.local_med_data.name;
+        let html_data = this.props.local_med_data;
         
         return (
             <div>
               
               <ul>
-                  {html_data}
+                <li>Name:{html_data.name}</li>
+                <li>Email:{html_data.email}</li>
+                <li>Website:{html_data.website}</li>
                 </ul>
             </div>
         );

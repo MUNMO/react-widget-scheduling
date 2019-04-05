@@ -19,7 +19,9 @@ class Modal extends Component {
                 </div>
                     <div className="popup-body">
                      Name:{lists.name}
+                     <br/>
                      Email:{lists.email}
+                     <br/>
                      Website:{lists.website}
         
                     </div>
