@@ -29,7 +29,7 @@ const renderWidget = async event => {
 		document.body.appendChild(rootWidgetDiv);
 
 
-	ReactDOM.render(<Home { ...options } />, rootWidgetDiv)
+	ReactDOM.render(<Home { ...options }/>, rootWidgetDiv)
 };
 
 const directUrl = async (event, id) => {
@@ -61,11 +61,10 @@ $(window).on('load', function (e){
 		directUrl(e, id);
 		return false;
 	} else {
-		// var  a = document.querySelectorAll('a');
-		var  a = document.querySelectorAll('[data-iframe-react-toggle="modal"]');
-		for (var i =0; i < a.length; i++){
-			a[i].addEventListener("click", renderWidget);
-			a[i].shareid = getId(a[i].href);
+		var  link_attribute = document.querySelectorAll('[data-iframe-react-toggle="modal"]');
+		for (var i =0; i < link_attribute.length; i++){
+			link_attribute[i].addEventListener("click", renderWidget);
+			link_attribute[i].shareid = getId(a[i].href);
 		}
 	}
 })
